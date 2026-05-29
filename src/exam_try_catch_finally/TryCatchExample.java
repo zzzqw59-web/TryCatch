@@ -7,21 +7,21 @@ public class TryCatchExample {
         Scanner scanner = new Scanner(System.in);
         int number = 0;
 
-        while (true) {
+        while(true) {
             try {
-                System.out.print("정수를 입력해주세요:");
+                System.out.println("정수를 입력하세요.");
                 String input = scanner.nextLine();
 
-                // 아무것도 입력하지 않고 엔터만 누른경우
+                // 아무것도 입력하지 않고 엔터를 입력한 경우
                 if (input.isBlank()) {
-                    System.out.print("입력값이 없습니다. 정수를 입력하세요:");
+                    System.out.println("입력값이 없습니다. 정수를 입력하세요.");
                     continue;
                 }
 
-                // 문자열을 정수로 전환
+                // 문자열을 정수로 변환
                 number = Integer.parseInt(input);
 
-                // 정수 변환에 성공하면 반복문 종료
+                // 정수 변환에 성공
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("잘못된 입력입니다. 정수를 입력하세요.");
@@ -29,6 +29,5 @@ public class TryCatchExample {
         }
         System.out.println("입력받은 수: " + number);
         scanner.close();
-//        System.out.println("test");
     }
 }
